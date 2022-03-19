@@ -11,6 +11,7 @@
     require "scripts/combat"
     require "scripts/inventaire"
     require "scripts/interfaces/ui_victory"
+    require "scripts/trophees"
     require "math"
 
 
@@ -43,7 +44,7 @@
         action_choice = 1
         ----------------------
 
-        battle_number = 1
+        
         
         choix_UI = 1 --Choix interface
         choix_character = 1

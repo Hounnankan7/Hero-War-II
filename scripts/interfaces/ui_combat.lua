@@ -3,6 +3,7 @@
     require "settings"
     require "scripts/player"
     require "scripts/ennemie"
+    require "scripts/trophees"
 
 
 
@@ -48,6 +49,7 @@
         ui_action.special_attack = love.graphics.newImage("assets/icons/special_attack_32.png")
         ui_action.defense = love.graphics.newImage("assets/icons/shield.png")
         ui_action.run = love.graphics.newImage("assets/icons/run.png")
+        ui_action.battle_number = battle_number
 
         --INVENTAIRE
         ui_inventaire = {}
@@ -89,7 +91,7 @@
 
             
         --LES BOUTONS D'ACTIONS
-        
+        ui_action.battle_number = battle_number
 
         --INVENTAIRE
         love.graphics.print("x"..nbr_item.hp, 14*tileSize, 43*tileSize)
@@ -124,6 +126,8 @@
 
         --Just the middle rectangle
         love.graphics.rectangle("line", 30*tileSize, 38*tileSize, 64, 64)
+        love.graphics.print("BATTLE", 30.2*tileSize, 37*tileSize)
+        love.graphics.print(ui_action.battle_number, 31.5*tileSize, 39.5*tileSize)
 
 
         --Bouton d'action

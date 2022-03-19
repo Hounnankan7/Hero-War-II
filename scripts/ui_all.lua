@@ -6,6 +6,7 @@
     require "scripts/interfaces/ui_menu_principal"
     require "scripts/interfaces/ui_defeat"
     require "scripts/interfaces/ui_victory"
+    require "scripts/trophees"
 
 
 
@@ -20,6 +21,7 @@
 --MES FONCTIONS CREES------------------------------------------------------------------------
 
     function interface_init() --Initialisation de toutes les interfaces
+        trophee_Init()
         interfacePrincipale_init()
         Ui_Player_Selection_Init()
         ui_Combat_Init()
