@@ -31,6 +31,7 @@
         if joueur.health_point <= 0 then
 
             joueur.health_point = 0
+            my_turn = randomNumber(i, j)
             choix_UI = 5
 
             if choix_UI == 5 and love.mouse.isDown(1) then
@@ -69,6 +70,7 @@
         elseif ennemie.health_point <= 0 then
 
             ennemie.health_point = 0
+            my_turn = randomNumber(i, j)
             choix_UI = 4
 
             if choix_UI == 4 and love.mouse.isDown(1) then
@@ -79,6 +81,8 @@
                 -- Conversion pixer vers cases de la grille
                 mousePosX_1 = math.floor((i/16)+1)
                 mousePosY_1 = math.floor((j/16)+1)
+
+                
 
                 if mousePosY_1 >= 26 and mousePosY_1 <= 28.5 and mousePosX_1 >= 16 and mousePosX_1 <= 20 then
                     

@@ -42,9 +42,8 @@ end
 
 function ennemyAI(dt, action_choice) -- Sequence possible d'action de l'ennemie
 
-
     action_choice = randomNumber(c, d)
-
+    
     if action_choice == 1 then
         EnnemySimpleAttack(dt)
     elseif action_choice == 2 then
@@ -54,6 +53,7 @@ function ennemyAI(dt, action_choice) -- Sequence possible d'action de l'ennemie
     elseif action_choice == 3 then
         EnnemyDefend(dt)
     end
+
     
       
 end
