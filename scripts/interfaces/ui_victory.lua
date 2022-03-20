@@ -83,10 +83,10 @@
                 mousePosX_1 = math.floor((i/16)+1)
                 mousePosY_1 = math.floor((j/16)+1)
 
-                
 
                 if mousePosY_1 >= 26 and mousePosY_1 <= 28.5 and mousePosX_1 >= 16 and mousePosX_1 <= 20 then
                     
+                    calcul_trophee_slayer()
                     monster_choice = randomNumber(a, b)
                     EnnemyCreation()
                     battle_number = battle_number + 1
@@ -95,6 +95,7 @@
             
                 elseif mousePosY_1 >= 26 and mousePosY_1 <= 28.5 and mousePosX_1 >= 22 and mousePosX_1 <= 26 then
 
+                    calcul_trophee_slayer()
                     monster_choice = randomNumber(a, b)
                     EnnemyCreation()
                     battle_number = 1
