@@ -22,7 +22,7 @@
         ui_principal.text_1 = "New Battle"
         ui_principal.text_2 = "Trophies"
         ui_principal.text_3 = "End Game"
-        ui_principal.text_4 = "2022 - Created by bloodkingH7"
+        ui_principal.text_4 = "2022 - Created by Hounnankan7"
         
     end
 
