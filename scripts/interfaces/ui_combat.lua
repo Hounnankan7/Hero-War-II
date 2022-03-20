@@ -147,7 +147,7 @@
         --Bouton inventaire
         love.graphics.setColor(1, 1, 1)
         love.graphics.setFont(font_third)
-        love.graphics.print("Inventaire", 18*tileSize, 38*tileSize)
+        love.graphics.print("Inventory", 18*tileSize, 38*tileSize)
         love.graphics.rectangle("line", 14*tileSize, 40*tileSize, 32, 32)
         love.graphics.rectangle("line", 18*tileSize, 40*tileSize, 32, 32)
         love.graphics.rectangle("line", 22*tileSize, 40*tileSize, 32, 32)

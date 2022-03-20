@@ -68,6 +68,8 @@
 
 
         choix_UI = manipulationInterface(choix_UI, dt) -- réaction en fonction des boutons cliqués
+
+        trophee_Update()
         
         victory()
 
@@ -97,6 +99,8 @@
             draw_Ui_victory()
         elseif choix_UI == 5 then
             draw_Ui_Defeat()
+        elseif choix_UI == 6 then
+            trophee_Draw()
         end
 
     end

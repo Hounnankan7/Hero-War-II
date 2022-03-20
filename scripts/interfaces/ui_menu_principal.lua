@@ -19,9 +19,9 @@
         ui_principal = {}
 
         ui_principal.title = "HERO WAR II"
-        ui_principal.text_1 = "Nouvelle Bataille"
-        ui_principal.text_2 = "Continuer Bataille"
-        ui_principal.text_3 = "Quitter Jeu"
+        ui_principal.text_1 = "New Battle"
+        ui_principal.text_2 = "Trophies"
+        ui_principal.text_3 = "End Game"
         ui_principal.text_4 = "2022 - Created by bloodkingH7"
         
     end
@@ -57,9 +57,11 @@
                 interface_choice = 2
                 delay_s(0.9)
 
-            elseif mousePosY >= 21 and mousePosY <= 24 and mousePosX >= 16 and mousePosX <= 41 then -- Clique sur Continuer bataille
+            elseif mousePosY >= 21 and mousePosY <= 24 and mousePosX >= 16 and mousePosX <= 41 then -- Clique sur Trophees
                 
                 --REVENIR LE FAIRE
+                interface_choice = 6
+                delay_s(0.9)
 
             end
         end

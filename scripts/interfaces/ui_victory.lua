@@ -1,6 +1,7 @@
 --Les includes necessaires
 	--Exemple: require "nom_du_fichier"
     require "settings"
+    --require "scripts/trophees"
 
 
 

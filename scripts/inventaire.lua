@@ -36,6 +36,7 @@ function usePotionHP(dt) --Utilisation de la potion HP
         joueur.health_point = math.floor((joueur.health_point + 10) + 0*dt)
         nbr_item.hp = nbr_item.hp - 1
         my_turn = 2
+        trophee.potion = trophee.potion + 1
         delay_s(0.9)
 
         print("Player "..my_turn.." turn")
@@ -55,6 +56,7 @@ function usePotionATK(dt) --Utilisation de la potion ATK
         joueur.attack_point = math.floor((joueur.attack_point + 10) + 0*dt)
         nbr_item.atk = nbr_item.atk - 1
         my_turn = 2
+        trophee.potion = trophee.potion + 1
         delay_s(0.9)
 
         print("Player "..my_turn.." turn")
@@ -73,6 +75,7 @@ function usePotionDEF(dt) --Utilisation de la potion DEF
         joueur.defense_point = math.floor((joueur.defense_point + 10) + 0*dt)
         nbr_item.def = nbr_item.def - 1
         my_turn = 2
+        trophee.potion = trophee.potion + 1
         delay_s(0.9)
 
         print("Player "..my_turn.." turn")
@@ -91,6 +94,7 @@ function usePotionMP(dt) --Utilisation de la potion MP
         joueur.magic_point = math.floor((joueur.magic_point + 10) + 0*dt)
         nbr_item.mp = nbr_item.mp - 1
         my_turn = 2
+        trophee.potion = trophee.potion + 1
         delay_s(0.9)
 
         print("Player "..my_turn.." turn")

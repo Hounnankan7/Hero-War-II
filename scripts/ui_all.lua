@@ -53,7 +53,10 @@
         elseif interface_choice == 5 then
            
             a = action_UI_Defeat(interface_choice,dt)
-            
+
+        elseif interface_choice == 6 then
+              
+            a = action_UI_Trophee(interface_choice,dt)
 
         end
 
