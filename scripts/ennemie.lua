@@ -52,9 +52,7 @@ function ennemyAI(dt, action_choice) -- Sequence possible d'action de l'ennemie
         EnnemySpecialAttack(dt)
     elseif action_choice == 3 then
         EnnemyDefend(dt)
-    end
-
-    
+    end 
       
 end
 
@@ -81,9 +79,9 @@ function EnnemyCriticalAttack(dt)
 
     if joueur.health_point >= 1 and joueur.health_point <= joueur.max_health_point then
 
-        print("Player "..my_turn.." deal 100 damage")
+        print("Player "..my_turn.." deal 150 damage")
 
-        joueur.health_point = math.floor((joueur.health_point - 10) + 0*dt)
+        joueur.health_point = math.floor((joueur.health_point - 15) + 0*dt)
         my_turn = 1
         delay_s(0.9)
     

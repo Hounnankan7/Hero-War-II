@@ -31,15 +31,35 @@ end
 function usePotionHP(dt) --Utilisation de la potion HP
     if nbr_item.hp >= 1  then
 
-        print("Player "..my_turn.." HP +10")
 
-        joueur.health_point = math.floor((joueur.health_point + 10) + 0*dt)
-        nbr_item.hp = nbr_item.hp - 1
-        my_turn = 2
-        trophee.potion = trophee.potion + 1
-        delay_s(0.9)
-
-        print("Player "..my_turn.." turn")
+        if joueur.health_point < joueur.max_health_point then
+            if joueur.health_point + 10 < joueur.max_health_point then
+                print("Player "..my_turn.." HP +10")
+    
+                joueur.health_point = math.floor((joueur.health_point + 10) + 0*dt)
+                nbr_item.hp = nbr_item.hp - 1
+                my_turn = 2
+                trophee.potion = trophee.potion + 1
+                delay_s(0.9)
+        
+                print("Player "..my_turn.." turn")
+            elseif joueur.health_point + 10 >= joueur.max_health_point then
+                print("Player "..my_turn.." HP +10")
+    
+                joueur.health_point = joueur.max_health_point
+                nbr_item.hp = nbr_item.hp - 1
+                my_turn = 2
+                trophee.potion = trophee.potion + 1
+                delay_s(0.9)
+        
+                print("Player "..my_turn.." turn")
+    
+            end
+        elseif joueur.health_point >= joueur.max_health_point then
+            print("Votre vie est deja pleine")
+            joueur.health_point = joueur.max_health_point
+            delay_s(0.9)
+        end
 
     elseif nbr_item.hp <= 0 then
         nbr_item.hp = 0
