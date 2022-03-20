@@ -14,7 +14,15 @@
 function trophee_Init()
     
     battle_number = 1
-    
+
+    --Nombres Trophees
+    trophee = {}
+
+    trophee.battle_number = 0
+    trophee.potion = 0
+    trophee.defeat_number = 0
+
+
 end
 
 ---------------------------------------------------------------------------------------------
