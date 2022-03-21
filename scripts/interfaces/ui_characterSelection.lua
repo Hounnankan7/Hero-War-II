@@ -146,6 +146,9 @@
             mousePosX = math.floor((x/16)+1)
             mousePosY = math.floor((y/16)+1)
 
+            battle_number = 1
+            trophee.section_number = trophee.section_number + 1
+
             if mousePosY >= 36 and mousePosY <= 39 and mousePosX >= 1 and mousePosX <= 11 then
                 choix_character = 1
                 PlayerCreation()

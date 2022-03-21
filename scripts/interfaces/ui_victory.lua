@@ -49,7 +49,6 @@
                     PlayerCreation()
                     monster_choice = randomNumber(a, b)
                     EnnemyCreation()
-                    battle_number = 1
                     delay_s(2)
                     choix_UI = 2
 
@@ -59,7 +58,6 @@
                     PlayerCreation()
                     monster_choice = randomNumber(a, b)
                     EnnemyCreation()
-                    battle_number = 1
                     delay_s(2)
                     choix_UI = 1
 
@@ -94,7 +92,6 @@
                     calcul_trophee_slayer()
                     monster_choice = randomNumber(a, b)
                     EnnemyCreation()
-                    battle_number = battle_number + 1
                     delay_s(2)
                     choix_UI = 3
             
@@ -103,7 +100,6 @@
                     calcul_trophee_slayer()
                     monster_choice = randomNumber(a, b)
                     EnnemyCreation()
-                    battle_number = 1
                     delay_s(2)
                     choix_UI = 1
 

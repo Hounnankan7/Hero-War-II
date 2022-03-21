@@ -14,12 +14,13 @@
 function trophee_Init()
     
     battle_number = 1
+    battle_number_actu = 0
 
     --Nombres pour Trophees
     trophee = {}
 
-    trophee.battle_number = 0
-    trophee.defeat_number = 0
+    trophee.kill_number = 0
+    trophee.death_number = 0
     trophee.run_number = 0
     trophee.potion = 0
     trophee.emperor_slayer = 0
@@ -27,6 +28,9 @@ function trophee_Init()
     trophee.spearman_slayer = 0
     trophee.gunner_slayer = 0
     trophee.legendary_slayer = 0
+    trophee.master_slayer = 0
+    trophee.chanceux = 0
+    trophee.section_number = 0
 
     -- ui Trophees
     ui_trophee = {}
@@ -48,16 +52,16 @@ end
 
 function trophee_Update()
 
-    ui_trophee.trophee_1 = trophee.battle_number
-    ui_trophee.trophee_2 = trophee.defeat_number
+    ui_trophee.trophee_1 = trophee.kill_number 
+    ui_trophee.trophee_2 = trophee.death_number
     ui_trophee.trophee_3 = trophee.potion
     ui_trophee.trophee_4 = trophee.run_number
     ui_trophee.trophee_5 = trophee.swordman_slayer
     ui_trophee.trophee_6 = trophee.spearman_slayer
     ui_trophee.trophee_7 = trophee.gunner_slayer
-    ui_trophee.trophee_8 = 0
-    ui_trophee.trophee_9 = 0
-    ui_trophee.trophee_10 = 0
+    ui_trophee.trophee_8 = trophee.section_number
+    ui_trophee.trophee_9 = trophee.chanceux
+    ui_trophee.trophee_10 = trophee.master_slayer
     ui_trophee.trophee_11 = trophee.legendary_slayer
     ui_trophee.trophee_12 = trophee.emperor_slayer
 
@@ -65,21 +69,34 @@ end
 -- LES FONCTIONS DE CALCUL DE TROPHEE ----------------------------------------
 function calcul_trophee_slayer()
 
-    if monster_choice >= 1 and monster_choice <= 4 or monster_choice >= 16 and monster_choice <= 18 then
-        trophee.swordman_slayer = trophee.swordman_slayer + 1
+    if choix_UI == 4 then
 
-    elseif monster_choice >= 6 and monster_choice <= 10 or monster_choice >= 19 and monster_choice <= 21 then
-        trophee.spearman_slayer = trophee.spearman_slayer + 1
+        trophee.kill_number = trophee.kill_number + 1
 
-    elseif monster_choice >= 11 and monster_choice <= 15 or monster_choice >= 22 and monster_choice <= 24 then
-        trophee.gunner_slayer = trophee.gunner_slayer + 1
+        if monster_choice >= 1 and monster_choice <= 4 then
+            trophee.swordman_slayer = trophee.swordman_slayer + 1
+    
+        elseif monster_choice >= 6 and monster_choice <= 10 then
+            trophee.spearman_slayer = trophee.spearman_slayer + 1
+    
+        elseif monster_choice >= 11 and monster_choice <= 15 then
+            trophee.gunner_slayer = trophee.gunner_slayer + 1
+    
+        elseif monster_choice >= 25 and monster_choice <= 27 or monster_choice == 28 or monster_choice == 29 then
+            trophee.legendary_slayer = trophee.legendary_slayer + 1
+    
+        elseif monster_choice >= 16 and monster_choice <= 18 or monster_choice >= 19 and monster_choice <= 21 or monster_choice >= 22 and monster_choice <= 24 then
+            trophee.master_slayer = trophee.master_slayer + 1
+    
+        elseif monster_choice == 30 then
+            trophee.emperor_slayer = trophee.emperor_slayer + 1
+    
+        end
 
-    elseif monster_choice >= 25 and monster_choice <= 27 or monster_choice == 28 or monster_choice == 29 then
-        trophee.legendary_slayer = trophee.legendary_slayer + 1
-
-    elseif monster_choice == 30 then
-        trophee.emperor_slayer = trophee.emperor_slayer + 1
-
+    elseif choix_UI == 5 then
+            
+        trophee.death_number = trophee.death_number + 1 
+        
     end
     
 end
@@ -94,18 +111,18 @@ function trophee_Draw()
 
 
     --TITRE DES TROPHEE
-    love.graphics.print(" TRUE WARRIOR", 18*tileSize, 20.6*tileSize)
-    love.graphics.print(" DEFEATED WARRIOR", 18*tileSize, 24.6*tileSize)
-    love.graphics.print(" LOOSER WARRIOR", 18*tileSize, 28.6*tileSize)
+    love.graphics.print(" KILLED WARRIORS", 18*tileSize, 20.6*tileSize)
+    love.graphics.print(" NUMBER OF DEATHS", 18*tileSize, 24.6*tileSize)
+    love.graphics.print(" RUN FROM BATTLE", 18*tileSize, 28.6*tileSize)
     love.graphics.print(" POTION ADDICT", 18*tileSize, 32.6*tileSize)
 
     love.graphics.print(" SWORDMAN SLAYER", 32*tileSize, 20.6*tileSize)
     love.graphics.print(" SPEARMAN SLAYER", 32*tileSize, 24.6*tileSize)
     love.graphics.print(" ANTI-GUNNER", 32*tileSize, 28.6*tileSize)
-    love.graphics.print("", 32*tileSize, 32.6*tileSize)
+    love.graphics.print(" SECTION NUMBER", 32*tileSize, 32.6*tileSize)
 
-    love.graphics.print("", 46*tileSize, 20.6*tileSize)
-    love.graphics.print("", 46*tileSize, 24.6*tileSize)
+    love.graphics.print(" CHANCEUX", 46*tileSize, 20.6*tileSize)
+    love.graphics.print(" MASTER SLAYER", 46*tileSize, 24.6*tileSize)
     love.graphics.print(" ANTI-HEROES", 46*tileSize, 28.6*tileSize)
     love.graphics.print(" EMPEROR SLAYER", 46*tileSize, 32.6*tileSize)
 

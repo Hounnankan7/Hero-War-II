@@ -43,6 +43,7 @@
         
             elseif mousePosY_1 >= 40 and mousePosY_1 <= 42 and mousePosX_1 >= 48 and mousePosX_1 <= 50 then -- Si on clique sur run
                 
+                trophee.run_number = trophee.run_number + 1
                 choix_UI = 1 -- Retour vers l'écran principal avec perte de la progression
                 print("Player "..my_turn.." run")
         
