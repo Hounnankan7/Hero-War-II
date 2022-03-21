@@ -86,6 +86,11 @@
 
                 if mousePosY_1 >= 26 and mousePosY_1 <= 28.5 and mousePosX_1 >= 16 and mousePosX_1 <= 20 then
                     
+                    --Ajout système level up
+                    level_UP()
+
+                    --
+
                     calcul_trophee_slayer()
                     monster_choice = randomNumber(a, b)
                     EnnemyCreation()

@@ -12,6 +12,7 @@
     require "scripts/inventaire"
     require "scripts/interfaces/ui_victory"
     require "scripts/trophees"
+    require "scripts/level_Up_System"
     require "math"
 
 
