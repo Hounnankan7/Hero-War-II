@@ -13,6 +13,7 @@
     require "scripts/interfaces/ui_victory"
     require "scripts/trophees"
     require "scripts/level_Up_System"
+    require "scripts/audio"
     require "math"
 
 
@@ -27,6 +28,10 @@
 --LES FONCTIONS PROPRES A LOVE2D-------------------------------------------------------------
     function love.load(...) --Fonction d'initialisation des éléments propre a Love2D
         
+        --Audios Initialisation----------------------------------------------
+        audio_Init()
+        ---------------------------------------------------------------------
+
         -- var pour le tour par tour du combat
         i = 1
         j = 2
@@ -84,7 +89,7 @@
         
         
         -----
-
+        audio_Update()
 
     end
 
@@ -101,9 +106,6 @@
             draw_Ui_Combat()
         elseif choix_UI == 4 then
             loot_Calculation()
-
-            
-
             draw_Ui_victory()
         elseif choix_UI == 5 then
             draw_Ui_Defeat()
