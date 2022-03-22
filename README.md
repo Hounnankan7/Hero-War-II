@@ -7,7 +7,7 @@ Version 1.0 of the text based fighting game between heroes from legend, and deve
 
 ![Screenshot](assets/readme_image/menu_principal.PNG)
 
-+ Choississez parmi quatre héros principals :
++ Choississez parmi quatre héros principaux :
 
 ![Screenshot](assets/readme_image/character_choose.PNG)
 
