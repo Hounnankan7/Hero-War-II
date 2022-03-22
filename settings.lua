@@ -6,10 +6,12 @@
 --Fonts-----------------------------------------
     font_main_size = 60
     font_second_size = 20
-    font_third_size = 10   
+    font_third_size = 10  
+    font_quard_size = 8 
     font_main = love.graphics.newFont("assets/fonts/PressStart2P.ttf", font_main_size)
     font_second = love.graphics.newFont("assets/fonts/PressStart2P.ttf", font_second_size)
     font_third = love.graphics.newFont("assets/fonts/PressStart2P.ttf", font_third_size)
+    font_quard = love.graphics.newFont("assets/fonts/PressStart2P.ttf", font_quard_size)
         
 
 --MES FONCTIONS CREES------------------------------------------------------------------------

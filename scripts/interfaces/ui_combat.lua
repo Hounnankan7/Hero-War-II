@@ -29,7 +29,7 @@
             ui_combat_player.level = "LVL: "..joueur.level.."/"..joueur.max_level
             ui_combat_player.exp = "EXP: "..joueur.exp_actuel.."/"..joueur.exp_next_level
             ui_combat_player.hp = "HP: "..joueur.health_point.."/"..joueur.max_health_point
-            ui_combat_player.mp = "TechP: "..joueur.magic_point.."/"..joueur.max_magic_point
+            ui_combat_player.mp = "TP: "..joueur.magic_point.."/"..joueur.max_magic_point
             ui_combat_player.attack = "ATK: "..joueur.attack_point.."/"..joueur.max_attack_point
             ui_combat_player.defense = "DEF: "..joueur.defense_point.."/"..joueur.max_defense_point
 
@@ -37,7 +37,7 @@
             ui_combat_ennemy = {}
             ui_combat_ennemy.name = ennemie.name
             ui_combat_ennemy.hp = "HP: "..ennemie.health_point.."/"..ennemie.max_health_point
-            ui_combat_ennemy.mp = "TechP: "..ennemie.magic_point.."/"..ennemie.max_magic_point
+            ui_combat_ennemy.mp = "TP: "..ennemie.magic_point.."/"..ennemie.max_magic_point
             ui_combat_ennemy.attack = "ATK: "..ennemie.attack_point.."/"..ennemie.max_attack_point
             ui_combat_ennemy.defense = "DEF: "..ennemie.defense_point.."/"..ennemie.max_defense_point
 	        ui_combat_ennemy.exp_loot = "EXP LOOT: "..ennemie.exp_loot
@@ -45,9 +45,10 @@
             
         --LES BOUTONS D'ACTIONS
         ui_action = {}
-        ui_action.normal_attack = love.graphics.newImage("assets/icons/normal_attack_32.png")
-        ui_action.special_attack = love.graphics.newImage("assets/icons/special_attack_32.png")
-        ui_action.defense = love.graphics.newImage("assets/icons/shield.png")
+        ui_action.normal_attack = love.graphics.newImage("assets/icons/actions/sword.png")
+        ui_action.skill_1 = love.graphics.newImage("assets/icons/actions/skill1.png")
+        ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/skill2.png")
+        ui_action.defense = love.graphics.newImage("assets/icons/actions/shield.png")
         ui_action.run = love.graphics.newImage("assets/icons/run.png")
         ui_action.battle_number = battle_number
 
@@ -57,10 +58,10 @@
         ui_inventaire.item_attack = love.graphics.newImage("assets/icons/Ketchup.png")
         ui_inventaire.item_defense = love.graphics.newImage("assets/icons/Read bottle.png")
         ui_inventaire.item_mp = love.graphics.newImage("assets/icons/Card.png")
-        love.graphics.print("x"..nbr_item.hp, 14*tileSize, 43*tileSize)
-        love.graphics.print("x"..nbr_item.atk, 18*tileSize, 43*tileSize)
-        love.graphics.print("x"..nbr_item.def, 22*tileSize, 43*tileSize)
-        love.graphics.print("x"..nbr_item.mp, 26*tileSize, 43*tileSize)
+        love.graphics.print("x"..nbr_item.hp, 14*tileSize, 45*tileSize)
+        love.graphics.print("x"..nbr_item.hp_2, 18*tileSize, 45*tileSize)
+        love.graphics.print("x"..nbr_item.mp_2, 22*tileSize, 45*tileSize)
+        love.graphics.print("x"..nbr_item.mp, 26*tileSize, 45*tileSize)
 
     end
 
@@ -76,7 +77,7 @@
             ui_combat_player.level = "LVL: "..joueur.level.."/"..joueur.max_level
             ui_combat_player.exp = "EXP: "..joueur.exp_actuel.."/"..joueur.exp_next_level
             ui_combat_player.hp = "HP: "..joueur.health_point.."/"..joueur.max_health_point
-            ui_combat_player.mp = "TechP: "..joueur.magic_point.."/"..joueur.max_magic_point
+            ui_combat_player.mp = "TP: "..joueur.magic_point.."/"..joueur.max_magic_point
             ui_combat_player.attack = "ATK: "..joueur.attack_point.."/"..joueur.max_attack_point
             ui_combat_player.defense = "DEF: "..joueur.defense_point.."/"..joueur.max_defense_point
 
@@ -84,7 +85,7 @@
             ui_combat_ennemy = {}
             ui_combat_ennemy.name = ennemie.name
             ui_combat_ennemy.hp = "HP: "..ennemie.health_point.."/"..ennemie.max_health_point
-            ui_combat_ennemy.mp = "TechP: "..ennemie.magic_point.."/"..ennemie.max_magic_point
+            ui_combat_ennemy.mp = "TP: "..ennemie.magic_point.."/"..ennemie.max_magic_point
             ui_combat_ennemy.attack = "ATK: "..ennemie.attack_point.."/"..ennemie.max_attack_point
             ui_combat_ennemy.defense = "DEF: "..ennemie.defense_point.."/"..ennemie.max_defense_point
 	        ui_combat_ennemy.exp_loot = "EXP LOOT: "..ennemie.exp_loot
@@ -95,8 +96,8 @@
 
         --INVENTAIRE
         love.graphics.print("x"..nbr_item.hp, 14*tileSize, 43*tileSize)
-        love.graphics.print("x"..nbr_item.atk, 18*tileSize, 43*tileSize)
-        love.graphics.print("x"..nbr_item.def, 22*tileSize, 43*tileSize)
+        love.graphics.print("x"..nbr_item.hp_2, 18*tileSize, 43*tileSize)
+        love.graphics.print("x"..nbr_item.mp_2, 22*tileSize, 43*tileSize)
         love.graphics.print("x"..nbr_item.mp, 26*tileSize, 43*tileSize)
         
 
@@ -133,21 +134,31 @@
         --Bouton d'action
         love.graphics.setColor(1, 1, 1)
         love.graphics.setFont(font_third)
-        love.graphics.print("Actions", 40*tileSize, 38*tileSize)
+        love.graphics.print("Actions", 40*tileSize, 37*tileSize)
         love.graphics.rectangle("line", 36*tileSize, 40*tileSize, 32, 32)
         love.graphics.rectangle("line", 40*tileSize, 40*tileSize, 32, 32)
+        love.graphics.rectangle("line", 40*tileSize, 44*tileSize, 32, 32)--
         love.graphics.rectangle("line", 44*tileSize, 40*tileSize, 32, 32)
         love.graphics.rectangle("line", 48*tileSize, 40*tileSize, 32, 32)
-        love.graphics.draw(ui_action.normal_attack, 36*tileSize, 40*tileSize)
-        love.graphics.draw(ui_action.special_attack, 40*tileSize, 40*tileSize)
-        love.graphics.draw(ui_action.defense, 44*tileSize, 40*tileSize)
-        love.graphics.draw(ui_action.run, 48*tileSize, 40*tileSize)
+
+        love.graphics.draw(ui_action.normal_attack, 36.1*tileSize, 40.2*tileSize)
+        love.graphics.draw(ui_action.skill_1, 40*tileSize, 40*tileSize)
+        love.graphics.draw(ui_action.skill_2, 40.05*tileSize, 44*tileSize)--
+        love.graphics.draw(ui_action.defense, 44.1*tileSize, 40.2*tileSize)
+        love.graphics.draw(ui_action.run, 47.6*tileSize, 39.7*tileSize)
+
+        love.graphics.setFont(font_quard)
+        love.graphics.print("Attack", 35.5*tileSize, 38.8*tileSize)
+        love.graphics.print("Skill.1", 39.2*tileSize, 38.8*tileSize)
+        love.graphics.print("Skill.2", 39.2*tileSize, 42.8*tileSize)--
+        love.graphics.print("Defend", 43.5*tileSize, 38.8*tileSize)
+        love.graphics.print("Run", 48.2*tileSize, 38.8*tileSize)
 
 
         --Bouton inventaire
         love.graphics.setColor(1, 1, 1)
         love.graphics.setFont(font_third)
-        love.graphics.print("Inventory", 18*tileSize, 38*tileSize)
+        love.graphics.print("Inventory", 18*tileSize, 37*tileSize)
         love.graphics.rectangle("line", 14*tileSize, 40*tileSize, 32, 32)
         love.graphics.rectangle("line", 18*tileSize, 40*tileSize, 32, 32)
         love.graphics.rectangle("line", 22*tileSize, 40*tileSize, 32, 32)
@@ -156,9 +167,15 @@
         love.graphics.draw(ui_inventaire.item_attack, 18*tileSize, 40*tileSize)
         love.graphics.draw(ui_inventaire.item_defense, 22*tileSize, 40*tileSize)
         love.graphics.draw(ui_inventaire.item_mp, 26*tileSize, 40*tileSize)
+        love.graphics.setFont(font_quard)
+        love.graphics.print("HP+10", 14*tileSize, 38.8*tileSize)
+        love.graphics.print("HP+150", 18*tileSize, 38.8*tileSize)
+        love.graphics.print("TP+10", 22*tileSize, 38.8*tileSize)
+        love.graphics.print("TP+150", 26*tileSize, 38.8*tileSize)
+        love.graphics.setFont(font_third)
         love.graphics.print("x"..nbr_item.hp, 14*tileSize, 43*tileSize)
-        love.graphics.print("x"..nbr_item.atk, 18*tileSize, 43*tileSize)
-        love.graphics.print("x"..nbr_item.def, 22*tileSize, 43*tileSize)
+        love.graphics.print("x"..nbr_item.hp_2, 18*tileSize, 43*tileSize)
+        love.graphics.print("x"..nbr_item.mp_2, 22*tileSize, 43*tileSize)
         love.graphics.print("x"..nbr_item.mp, 26*tileSize, 43*tileSize)
         
 

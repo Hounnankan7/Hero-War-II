@@ -47,6 +47,22 @@ function trophee_Init()
     ui_trophee.trophee_11 = 0
     ui_trophee.trophee_12 = 0
 
+    -- Icon Trophees
+    ui_trophee.trophee_image_1 = love.graphics.newImage("assets/icons/trophy/c (620).jpg")
+    ui_trophee.trophee_image_2 = love.graphics.newImage("assets/icons/trophy/c (620).jpg")
+    ui_trophee.trophee_image_3 = love.graphics.newImage("assets/icons/trophy/Tomatoes.png")
+    ui_trophee.trophee_image_4 = love.graphics.newImage("assets/icons/trophy/c (620).jpg")
+
+    ui_trophee.trophee_image_5 = love.graphics.newImage("assets/icons/trophy/c (126).jpg")
+    ui_trophee.trophee_image_6 = love.graphics.newImage("assets/icons/trophy/c (125).jpg")
+    ui_trophee.trophee_image_7 = love.graphics.newImage("assets/icons/trophy/c (132).jpg")
+    ui_trophee.trophee_image_8 = love.graphics.newImage("assets/icons/trophy/airhorn.png")
+
+    ui_trophee.trophee_image_9 = love.graphics.newImage("assets/icons/trophy/dice.png")
+    ui_trophee.trophee_image_10 = love.graphics.newImage("assets/icons/trophy/star.png")
+    ui_trophee.trophee_image_11 = love.graphics.newImage("assets/icons/trophy/star.png")
+    ui_trophee.trophee_image_12 = love.graphics.newImage("assets/icons/trophy/Shield.png")
+
 
 end
 
@@ -109,12 +125,27 @@ function trophee_Draw()
     love.graphics.print("TROPHIES", 16*tileSize, 12*tileSize)
     love.graphics.setFont(font_third)
 
+    --IMAGE DES TROPHEE
+    love.graphics.draw(ui_trophee.trophee_image_1, 16*tileSize, 20*tileSize)
+    love.graphics.draw(ui_trophee.trophee_image_2, 16*tileSize, 24*tileSize)
+    love.graphics.draw(ui_trophee.trophee_image_4, 16*tileSize, 28*tileSize)
+    love.graphics.draw(ui_trophee.trophee_image_3, 16*tileSize, 32*tileSize)
+
+    love.graphics.draw(ui_trophee.trophee_image_5, 30*tileSize, 20*tileSize)
+    love.graphics.draw(ui_trophee.trophee_image_6, 30*tileSize, 24*tileSize)
+    love.graphics.draw(ui_trophee.trophee_image_7, 30*tileSize, 28*tileSize)
+    love.graphics.draw(ui_trophee.trophee_image_8, 30*tileSize, 32*tileSize)
+
+    love.graphics.draw(ui_trophee.trophee_image_9, 44*tileSize, 20*tileSize)
+    love.graphics.draw(ui_trophee.trophee_image_10, 44*tileSize, 24*tileSize)
+    love.graphics.draw(ui_trophee.trophee_image_11, 44*tileSize, 28*tileSize)
+    love.graphics.draw(ui_trophee.trophee_image_12, 44*tileSize, 32*tileSize)
 
     --TITRE DES TROPHEE
     love.graphics.print(" KILLED WARRIORS", 18*tileSize, 20.6*tileSize)
     love.graphics.print(" NUMBER OF DEATHS", 18*tileSize, 24.6*tileSize)
     love.graphics.print(" RUN FROM BATTLE", 18*tileSize, 28.6*tileSize)
-    love.graphics.print(" POTION ADDICT", 18*tileSize, 32.6*tileSize)
+    love.graphics.print(" FOOD ADDICT", 18*tileSize, 32.6*tileSize)
 
     love.graphics.print(" SWORDMAN SLAYER", 32*tileSize, 20.6*tileSize)
     love.graphics.print(" SPEARMAN SLAYER", 32*tileSize, 24.6*tileSize)
@@ -178,6 +209,7 @@ function action_UI_Trophee(interface_choice,dt)
         if mousePosY >= 36 and mousePosY <= 39 and mousePosX >= 16 and mousePosX <= 21 then
             interface_choice = 1
         end
+
     end
 
     return interface_choice

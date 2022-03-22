@@ -46,6 +46,7 @@
 
                 if mousePosY_1 >= 26 and mousePosY_1 <= 28.5 and mousePosX_1 >= 16 and mousePosX_1 <= 20 then
                     
+                    trophee.death_number = trophee.death_number + 1
                     PlayerCreation()
                     monster_choice = randomNumber(a, b)
                     EnnemyCreation()
@@ -55,6 +56,7 @@
             
                 elseif mousePosY_1 >= 26 and mousePosY_1 <= 28.5 and mousePosX_1 >= 22 and mousePosX_1 <= 26 then
 
+                    trophee.death_number = trophee.death_number + 1
                     PlayerCreation()
                     monster_choice = randomNumber(a, b)
                     EnnemyCreation()
