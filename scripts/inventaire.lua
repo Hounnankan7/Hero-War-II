@@ -36,7 +36,7 @@ function usePotionHP(dt) --Utilisation de la potion HP + 10
             if joueur.health_point + 10 < joueur.max_health_point then
                 print("Player "..my_turn.." HP +10")
     
-                joueur.health_point = math.floor((joueur.health_point + 10) + 0*dt)
+                joueur.health_point = math.floor((joueur.health_point + 10 ) )
                 nbr_item.hp = nbr_item.hp - 1
                 my_turn = 2
                 trophee.potion = trophee.potion + 1
@@ -77,7 +77,7 @@ function usePotionATK(dt) --Utilisation de la potion HP + 150
             if joueur.health_point + 150 < joueur.max_health_point then
                 print("Player "..my_turn.." HP +150")
     
-                joueur.health_point = math.floor((joueur.health_point + 150) + 0*dt)
+                joueur.health_point = math.floor((joueur.health_point + 150 ) )
                 nbr_item.hp_2 = nbr_item.hp_2 - 1
                 my_turn = 2
                 trophee.potion = trophee.potion + 1
@@ -117,7 +117,7 @@ function usePotionDEF(dt) --Utilisation de la potion MP + 10
             if joueur.magic_point + 10 < joueur.max_magic_point then
                 print("Player "..my_turn.." TP +10")
     
-                joueur.magic_point = math.floor((joueur.magic_point + 10) + 0*dt)
+                joueur.magic_point = math.floor((joueur.magic_point + 10 ) )
                 nbr_item.mp = nbr_item.mp - 1
                 my_turn = 2
                 trophee.potion = trophee.potion + 1
@@ -157,7 +157,7 @@ function usePotionMP(dt) --Utilisation de la potion MP + 150
             if joueur.magic_point + 150 < joueur.max_magic_point then
                 print("Player "..my_turn.." TP +150")
     
-                joueur.magic_point = math.floor((joueur.magic_point + 150) + 0*dt)
+                joueur.magic_point = math.floor((joueur.magic_point + 150 ) )
                 nbr_item.mp_2 = nbr_item.mp_2 - 1
                 my_turn = 2
                 trophee.potion = trophee.potion + 1

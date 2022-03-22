@@ -41,9 +41,9 @@ player.exp_next_level = 0
 function CharacterSelection (db_character_choice) -- Fonction de choix du character du joueur en fonction de son choix en fonction de la valeur de db_character_choice
 
     --Les constantes de calcul
-    const_1 = 20 --cnst pour level up
-    const_2 = 100 --cnst pour level up
-    const_3 = 250 --cnst pour level up
+    const_1 = 40 --cnst pour level up
+    const_2 = 120 --cnst pour level up
+    const_3 = 400 --cnst pour level up
 
     if db_character_choice == 1 then -- Choix du SWORDMAN
 

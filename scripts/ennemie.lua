@@ -8,7 +8,7 @@
 
 --LES VARIABLES------------------------------------------------------------------------------
 
-
+damage_to_player = 0
 
 ---------------------------------------------------------------------------------------------
 
@@ -44,13 +44,13 @@ function ennemyAI(dt, action_choice) -- Sequence possible d'action de l'ennemie
 
     action_choice = randomNumber(c, d)
     
-    if action_choice == 1 then
+    if action_choice >= 1 and action_choice <= 4 then
         EnnemySimpleAttack(dt)
-    elseif action_choice == 2 then
+    elseif action_choice == 5 then
         EnnemyCriticalAttack(dt)
-    elseif action_choice == 4 then
+    elseif action_choice >= 6 and action_choice <= 7 then
         EnnemySpecialAttack(dt)
-    elseif action_choice == 3 then
+    elseif action_choice == 8 then
         EnnemyDefend(dt)
     end 
       
@@ -61,9 +61,10 @@ function EnnemySimpleAttack(dt)
 
     if joueur.health_point >= 1 and joueur.health_point <= joueur.max_health_point then
 
-        print("Player "..my_turn.." deal 10 damage")
+        damage_to_player = (ennemie.attack_point * (100/(100 + joueur.defense_point)))
+        print("Player "..my_turn.." deal "..damage_to_player.." damage")
 
-        joueur.health_point = math.floor((joueur.health_point - 10) + 0*dt)
+        joueur.health_point = math.floor((joueur.health_point - damage_to_player ) )
         my_turn = 1
         delay_s(0.9)
     
@@ -79,9 +80,10 @@ function EnnemyCriticalAttack(dt)
 
     if joueur.health_point >= 1 and joueur.health_point <= joueur.max_health_point then
 
-        print("Player "..my_turn.." deal 150 damage")
+        damage_to_player = ((ennemie.attack_point) * (100/(100 + joueur.defense_point))) + 4
+        print("Player "..my_turn.." deal critical damage of "..damage_to_player)
 
-        joueur.health_point = math.floor((joueur.health_point - 15) + 0*dt)
+        joueur.health_point = math.floor((joueur.health_point - damage_to_player ) )
         my_turn = 1
         delay_s(0.9)
     
@@ -97,10 +99,12 @@ function EnnemySpecialAttack(dt)
 
     if joueur.health_point >= 1 and joueur.health_point <= joueur.max_health_point then
 
-        print("Player "..my_turn.." deal 200 damage")
+        damage_to_player = ((ennemie.attack_point + 4) * (100/(100 + joueur.defense_point)))
+        print("Player "..my_turn.." use Special attack ") 
+        print("Player "..my_turn.." deal "..damage_to_player.." damage")
 
-        joueur.health_point = math.floor((joueur.health_point - 20) + 0*dt)
-        ennemie.magic_point = math.floor((ennemie.magic_point - 10) + 0*dt)
+        joueur.health_point = math.floor((joueur.health_point - damage_to_player ) )
+        ennemie.magic_point = math.floor((ennemie.magic_point - 10 ) )
         my_turn = 1
         delay_s(0.9)
 
@@ -116,7 +120,7 @@ function EnnemyDefend(dt)
 
     print("Player "..my_turn.." defense +10")
 
-    ennemie.defense_point = math.floor((ennemie.defense_point + 10) + 0*dt)
+    ennemie.defense_point = math.floor((ennemie.defense_point + 10 ) )
     my_turn = 1
     delay_s(0.9)
 

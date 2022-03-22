@@ -33,10 +33,14 @@
         
                 PlayerSimpleAttack(dt)
         
-            elseif mousePosY_1 >= 40 and mousePosY_1 <= 42 and mousePosX_1 >= 40 and mousePosX_1 <= 42 then -- Si on clique sur attaque spéciale
+            elseif mousePosY_1 >= 40 and mousePosY_1 <= 42 and mousePosX_1 >= 40 and mousePosX_1 <= 42 then -- Si on clique sur attaque spéciale 1
                 
-                PlayerSpecialAttack(dt)
+                PlayerSkill_1_Attack(dt)
         
+            elseif mousePosY_1 >= 44 and mousePosY_1 <= 46 and mousePosX_1 >= 40 and mousePosX_1 <= 42 then -- Si on clique sur attaque spéciale 2
+
+                PlayerSkill_2_Attack(dt)
+
             elseif mousePosY_1 >= 40 and mousePosY_1 <= 42 and mousePosX_1 >= 44 and mousePosX_1 <=46 then -- Si on clique sur defendre
         
                 PlayerDefend(dt)

@@ -71,23 +71,23 @@
         --EnnemyCreation()
 
         --INFOS PLAYERS ET ENNEMIES
-        ui_combat_player = {}
+            ui_combat_player = {}
             --Cote Players
             ui_combat_player.name = joueur.name
             ui_combat_player.level = "LVL: "..joueur.level.."/"..joueur.max_level
             ui_combat_player.exp = "EXP: "..joueur.exp_actuel.."/"..joueur.exp_next_level
             ui_combat_player.hp = "HP: "..joueur.health_point.."/"..joueur.max_health_point
             ui_combat_player.mp = "TP: "..joueur.magic_point.."/"..joueur.max_magic_point
-            ui_combat_player.attack = "ATK: "..joueur.attack_point.."/"..joueur.max_attack_point
-            ui_combat_player.defense = "DEF: "..joueur.defense_point.."/"..joueur.max_defense_point
+            ui_combat_player.attack = "ATK: "..joueur.attack_point
+            ui_combat_player.defense = "DEF: "..joueur.defense_point
 
             --Cote Ennemies
             ui_combat_ennemy = {}
             ui_combat_ennemy.name = ennemie.name
             ui_combat_ennemy.hp = "HP: "..ennemie.health_point.."/"..ennemie.max_health_point
             ui_combat_ennemy.mp = "TP: "..ennemie.magic_point.."/"..ennemie.max_magic_point
-            ui_combat_ennemy.attack = "ATK: "..ennemie.attack_point.."/"..ennemie.max_attack_point
-            ui_combat_ennemy.defense = "DEF: "..ennemie.defense_point.."/"..ennemie.max_defense_point
+            ui_combat_ennemy.attack = "ATK: "..ennemie.attack_point
+            ui_combat_ennemy.defense = "DEF: "..ennemie.defense_point
 	        ui_combat_ennemy.exp_loot = "EXP LOOT: "..ennemie.exp_loot
 
             

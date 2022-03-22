@@ -41,7 +41,7 @@
 
         --var choix d'action de l'ennemy---
         c = 1
-        d = 4
+        d = 8
         action_choice = 1
         ----------------------
 
@@ -50,9 +50,10 @@
         choix_UI = 1 --Choix interface
         choix_character = 1
 
+        PlayerCreation()
         EnnemyCreation()
 
-        PlayerCreation()
+        
 
         inventaire_Init()
 

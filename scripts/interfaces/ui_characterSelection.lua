@@ -152,6 +152,7 @@
             if mousePosY >= 36 and mousePosY <= 39 and mousePosX >= 1 and mousePosX <= 11 then
                 choix_character = 1
                 PlayerCreation()
+                EnnemyCreation()
                 interface_choice = 3
                 print(interface_choice)
                 print(choix_character)
@@ -159,6 +160,7 @@
             elseif mousePosY >= 36 and mousePosY <= 39 and mousePosX >= 17 and mousePosX <= 27 then
                 choix_character = 2
                 PlayerCreation()
+                EnnemyCreation()
                 interface_choice = 3
                 print(interface_choice)
                 print(choix_character)
@@ -166,6 +168,7 @@
             elseif mousePosY >= 36 and mousePosY <= 39 and mousePosX >= 33 and mousePosX <= 43 then
                 choix_character = 3
                 PlayerCreation()
+                EnnemyCreation()
                 interface_choice = 3
                 print(interface_choice)
                 print(choix_character)
@@ -173,6 +176,7 @@
             elseif mousePosY >= 36 and mousePosY <= 39 and mousePosX >= 49 and mousePosX <= 59 then
                 choix_character = 4
                 PlayerCreation()
+                EnnemyCreation()
                 interface_choice = 3
                 print(interface_choice)
                 print(choix_character)
