@@ -51,8 +51,8 @@ function CharacterSelection (db_character_choice) -- Fonction de choix du charac
         player.class = "Swordman"
         player.name = "Motoyasu Matsudaira"
         player.image = love.graphics.newImage("my_bdd/characters/Swordman.png")
-        player.max_health_point = 80
-        player.health_point = 80
+        player.max_health_point = 100
+        player.health_point = 100
         player.max_magic_point = 30
         player.magic_point = 30
         player.attack_point = 50
@@ -70,8 +70,8 @@ function CharacterSelection (db_character_choice) -- Fonction de choix du charac
         player.class = "Spearman"
         player.name = "Matabei Goto"
         player.image = love.graphics.newImage("my_bdd/characters/Spearman.png")
-        player.max_health_point = 70
-        player.health_point = 70
+        player.max_health_point = 100
+        player.health_point = 100
         player.max_magic_point = 30
         player.magic_point = 30
         player.attack_point = 45
@@ -89,8 +89,8 @@ function CharacterSelection (db_character_choice) -- Fonction de choix du charac
         player.class = "Gunner"
         player.name = "Takahisa Shimazu"
         player.image = love.graphics.newImage("my_bdd/characters/Gunner.png")
-        player.max_health_point = 75
-        player.health_point = 75
+        player.max_health_point = 100
+        player.health_point = 100
         player.max_magic_point = 55
         player.magic_point = 55
         player.attack_point = 30
@@ -108,8 +108,8 @@ function CharacterSelection (db_character_choice) -- Fonction de choix du charac
         player.class = "Ninja"
         player.name = "Kotaro Fuma" 
         player.image = love.graphics.newImage("my_bdd/characters/Ninja.png")
-        player.max_health_point = 60
-        player.health_point = 60
+        player.max_health_point = 100
+        player.health_point = 100
         player.max_magic_point = 60
         player.magic_point = 60
         player.attack_point = 40

@@ -75,6 +75,8 @@ function PlayerSimpleAttack(dt) --Function Attack normale
     elseif critical_chance == 5 then --Attack normale critique
         
         if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+            
+            trophee.chanceux = trophee.chanceux + 1
 
             plus_critic_normal = 10
             normal_damage_to_ennemy = (joueur.attack_point * (100/(100 + ennemie.defense_point))) + plus_critic_normal
@@ -119,6 +121,7 @@ function PlayerSkill_1_Attack(dt)
     
             elseif player.magic_point < 10 then
                 print("Vous n'avez pas assez de TP pour cette attaque")
+                delay_s(0.9)
             end
     
         elseif ennemie.health_point <= 0 then
@@ -131,6 +134,8 @@ function PlayerSkill_1_Attack(dt)
         if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
             if player.magic_point >= 10 then -- Condition sur la possession des mp necessaire à l'atk
                 
+                trophee.chanceux = trophee.chanceux + 1
+
                 plus_critic_skill = 14
                 skill_damage_to_ennemy = ((joueur.attack_point + 20) * (100/(100 + ennemie.defense_point))) + plus_critic_skill
 
@@ -146,6 +151,7 @@ function PlayerSkill_1_Attack(dt)
     
             elseif player.magic_point < 10 then
                 print("Vous n'avez pas assez de TP pour cette attaque")
+                delay_s(0.9)
             end
     
         elseif ennemie.health_point <= 0 then
@@ -180,6 +186,7 @@ function PlayerSkill_2_Attack(dt)
     
             elseif player.magic_point < 15 then
                 print("Vous n'avez pas assez de TP pour cette attaque")
+                delay_s(0.9)
             end
     
         elseif ennemie.health_point <= 0 then
@@ -192,6 +199,8 @@ function PlayerSkill_2_Attack(dt)
         if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
             if player.magic_point >= 15 then -- Condition sur la possession des mp necessaire à l'atk
                 
+                trophee.chanceux = trophee.chanceux + 1
+
                 plus_critic_skill = 16
                 skill_damage_to_ennemy = ((joueur.attack_point + 25) * (100/(100 + ennemie.defense_point))) + plus_critic_skill
 
@@ -207,6 +216,7 @@ function PlayerSkill_2_Attack(dt)
     
             elseif player.magic_point < 15 then
                 print("Vous n'avez pas assez de TP pour cette attaque")
+                delay_s(0.9)
             end
     
         elseif ennemie.health_point <= 0 then

@@ -59,6 +59,9 @@ function stats_evolution()
         joueur.defense_point = (joueur.level * 5.0) + def_random
         joueur.exp_next_level = math.floor( (const_exp2 * math.sqrt(joueur.level)) + const_exp1  )
 
+        joueur.health_point = joueur.max_health_point
+        joueur.magic_point = joueur.max_magic_point
+
     elseif joueur.id == 2 then
 
         hp_random = randomNumber(70, 75)
@@ -71,6 +74,9 @@ function stats_evolution()
         joueur.attack_point = (joueur.level * 5.0) + atk_random
         joueur.defense_point = (joueur.level * 5.0) + def_random
         joueur.exp_next_level = math.floor( (const_exp2 * math.sqrt(joueur.level)) + const_exp1  )
+
+        joueur.health_point = joueur.max_health_point
+        joueur.magic_point = joueur.max_magic_point
 
     elseif joueur.id == 3 then
 
@@ -85,6 +91,9 @@ function stats_evolution()
         joueur.defense_point = (joueur.level * 5.0) + def_random
         joueur.exp_next_level = math.floor( (const_exp2 * math.sqrt(joueur.level)) + const_exp1  )
 
+        joueur.health_point = joueur.max_health_point
+        joueur.magic_point = joueur.max_magic_point
+
     elseif joueur.id == 4 then
         
         hp_random = randomNumber(60, 65)
@@ -97,6 +106,9 @@ function stats_evolution()
         joueur.attack_point = (joueur.level * 5.0) + atk_random
         joueur.defense_point = (joueur.level * 5.0) + def_random
         joueur.exp_next_level = math.floor( (const_exp2 * math.sqrt(joueur.level)) + const_exp3  )
+
+        joueur.health_point = joueur.max_health_point
+        joueur.magic_point = joueur.max_magic_point
 
     end
 

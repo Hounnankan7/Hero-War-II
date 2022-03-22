@@ -23,7 +23,7 @@
         ui_player_selection.image_1 = love.graphics.newImage("my_bdd/characters/Swordman.png")
         ui_player_selection.character_name_1 = "Motoyasu Matsudaira"
         ui_player_selection.character_class_1 = "Class : ".."Swordman"
-        ui_player_selection.character_hp_1 = "HP : ".."80"
+        ui_player_selection.character_hp_1 = "HP : ".."100"
         ui_player_selection.character_mp_1 = "TP : ".."30"
         ui_player_selection.character_atk_1 = "ATK : ".."50"
         ui_player_selection.character_def_1 = "DEF : ".."40"
@@ -34,7 +34,7 @@
         ui_player_selection.image_2 = love.graphics.newImage("my_bdd/characters/Spearman.png")
         ui_player_selection.character_name_2 = "Matabei Goto"
         ui_player_selection.character_class_2 = "Class : ".."Spearman"
-        ui_player_selection.character_hp_2 = "HP : ".."70"
+        ui_player_selection.character_hp_2 = "HP : ".."100"
         ui_player_selection.character_mp_2 = "TP : ".."30"
         ui_player_selection.character_atk_2 = "ATK : ".."45"
         ui_player_selection.character_def_2 = "DEF : ".."55"
@@ -44,7 +44,7 @@
         ui_player_selection.image_3 = love.graphics.newImage("my_bdd/characters/Gunner.png")
         ui_player_selection.character_name_3 = "Takahisa Shimazu"
         ui_player_selection.character_class_3 = "Class : ".."Gunner"
-        ui_player_selection.character_hp_3 = "HP : ".."75"
+        ui_player_selection.character_hp_3 = "HP : ".."100"
         ui_player_selection.character_mp_3 = "TP : ".."55"
         ui_player_selection.character_atk_3 = "ATK : ".."30"
         ui_player_selection.character_def_3 = "DEF : ".."40"
@@ -54,7 +54,7 @@
         ui_player_selection.image_4 = love.graphics.newImage("my_bdd/characters/Ninja.png")
         ui_player_selection.character_name_4 = "Kotaro Fuma"
         ui_player_selection.character_class_4 = "Class : ".."Ninja"
-        ui_player_selection.character_hp_4 = "HP : ".."60"
+        ui_player_selection.character_hp_4 = "HP : ".."100"
         ui_player_selection.character_mp_4 = "TP : ".."60"
         ui_player_selection.character_atk_4 = "ATK : ".."40"
         ui_player_selection.character_def_4 = "DEF : ".."40"
