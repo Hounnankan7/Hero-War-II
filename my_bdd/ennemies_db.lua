@@ -59,8 +59,8 @@
             monster.id = 2
             monster.name = "Spearman"
             monster.image = love.graphics.newImage("my_bdd/monsters/Spearman.png")
-            monster.health_point = 100
-            monster.max_health_point = 100
+            monster.health_point = 110
+            monster.max_health_point = 110
             monster.magic_point = 45
             monster.max_magic_point = 45
             monster.attack_point = 19
@@ -74,8 +74,8 @@
             monster.id = 3
             monster.name = "Musketeer"
             monster.image = love.graphics.newImage("my_bdd/monsters/Musketeer.png")
-            monster.health_point = 100
-            monster.max_health_point = 100
+            monster.health_point = 120
+            monster.max_health_point = 120
             monster.magic_point = 60
             monster.max_magic_point = 60
             monster.attack_point = 22
@@ -89,105 +89,105 @@
             monster.id = 4
             monster.name = "Swordman Master"
             monster.image = love.graphics.newImage("my_bdd/monsters/Swordman Master.png")
-            monster.health_point = 50
-            monster.max_health_point = 50
-            monster.magic_point = 50
-            monster.max_magic_point = 50
-            monster.attack_point = 50
-            monster.max_attack_point = 50
-            monster.defense_point = 50
-            monster.max_defense_point = 50
-            monster.exp_loot = 50
+            monster.health_point = 340
+            monster.max_health_point = 340
+            monster.magic_point = 100
+            monster.max_magic_point = 100
+            monster.attack_point = 55
+            monster.max_attack_point = 55
+            monster.defense_point = 70
+            monster.max_defense_point = 70
+            monster.exp_loot = 140
 
         elseif random_monster >= 19 and random_monster <= 21 then
 
             monster.id = 5
             monster.name = "Spearman Master"
             monster.image = love.graphics.newImage("my_bdd/monsters/Spearman Master.png")
-            monster.health_point = 50
-            monster.max_health_point = 50
-            monster.magic_point = 50
-            monster.max_magic_point = 50
-            monster.attack_point = 50
-            monster.max_attack_point = 50
-            monster.defense_point = 50
-            monster.max_defense_point = 50
-            monster.exp_loot = 50
+            monster.health_point = 350
+            monster.max_health_point = 350
+            monster.magic_point = 100
+            monster.max_magic_point = 100
+            monster.attack_point = 45
+            monster.max_attack_point = 45
+            monster.defense_point = 70
+            monster.max_defense_point = 70
+            monster.exp_loot = 160
 
         elseif random_monster >= 22 and random_monster <= 24 then
 
             monster.id = 6
             monster.name = "Elite Musketeer"
             monster.image = love.graphics.newImage("my_bdd/monsters/Musketeer Master.png")
-            monster.health_point = 50
-            monster.max_health_point = 50
-            monster.magic_point = 50
-            monster.max_magic_point = 50
+            monster.health_point = 360
+            monster.max_health_point = 360
+            monster.magic_point = 150
+            monster.max_magic_point = 150
             monster.attack_point = 50
             monster.max_attack_point = 50
-            monster.defense_point = 50
-            monster.max_defense_point = 50
-            monster.exp_loot = 50
+            monster.defense_point = 80
+            monster.max_defense_point = 80
+            monster.exp_loot = 200
 
         elseif random_monster >= 25 and random_monster <= 27 then
 
             monster.id = 7
             monster.name = "Jubei Yagyu"
             monster.image = love.graphics.newImage("my_bdd/monsters/Jubei Yagyu.png")
-            monster.health_point = 50
-            monster.max_health_point = 50
-            monster.magic_point = 50
-            monster.max_magic_point = 50
-            monster.attack_point = 50
-            monster.max_attack_point = 50
-            monster.defense_point = 50
-            monster.max_defense_point = 50
-            monster.exp_loot = 50
+            monster.health_point = 1300
+            monster.max_health_point = 1300
+            monster.magic_point = 200
+            monster.max_magic_point = 200
+            monster.attack_point = 150
+            monster.max_attack_point = 150
+            monster.defense_point = 140
+            monster.max_defense_point = 140
+            monster.exp_loot = 250
 
         elseif random_monster == 28 then
 
             monster.id = 8
             monster.name = "Musashi Miyamoto"
             monster.image = love.graphics.newImage("my_bdd/monsters/Musashi Miyamoto.png")
-            monster.health_point = 50
-            monster.max_health_point = 50
-            monster.magic_point = 50
-            monster.max_magic_point = 50
-            monster.attack_point = 50
-            monster.max_attack_point = 50
-            monster.defense_point = 50
-            monster.max_defense_point = 50
-            monster.exp_loot = 50
+            monster.health_point = 1500
+            monster.max_health_point = 1500
+            monster.magic_point = 220
+            monster.max_magic_point = 220
+            monster.attack_point = 200
+            monster.max_attack_point = 200
+            monster.defense_point = 200
+            monster.max_defense_point = 200
+            monster.exp_loot = 280
 
         elseif random_monster == 29 then
 
             monster.id = 9
             monster.name = "Momotaro"
             monster.image = love.graphics.newImage("my_bdd/monsters/Momotaro.png")
-            monster.health_point = 50
-            monster.max_health_point = 50
-            monster.magic_point = 50
-            monster.max_magic_point = 50
-            monster.attack_point = 50
-            monster.max_attack_point = 50
-            monster.defense_point = 50
-            monster.max_defense_point = 50
-            monster.exp_loot = 50
+            monster.health_point = 1500
+            monster.max_health_point = 1500
+            monster.magic_point = 250
+            monster.max_magic_point = 250
+            monster.attack_point = 240
+            monster.max_attack_point = 240
+            monster.defense_point = 200
+            monster.max_defense_point = 200
+            monster.exp_loot = 300
 
         elseif random_monster == 30 then
 
             monster.id = 10
             monster.name = "Nobunaga Oda"
             monster.image = love.graphics.newImage("my_bdd/monsters/Oda Nobunaga.png")
-            monster.health_point = 50
-            monster.max_health_point = 50
-            monster.magic_point = 50
-            monster.max_magic_point = 50
-            monster.attack_point = 50
-            monster.max_attack_point = 50
-            monster.defense_point = 50
-            monster.max_defense_point = 50
-            monster.exp_loot = 50
+            monster.health_point = 3000
+            monster.max_health_point = 300
+            monster.magic_point = 500
+            monster.max_magic_point = 500
+            monster.attack_point = 300
+            monster.max_attack_point = 300
+            monster.defense_point = 340
+            monster.max_defense_point = 340
+            monster.exp_loot = 450
 
         end
 

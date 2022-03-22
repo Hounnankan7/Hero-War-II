@@ -101,6 +101,9 @@
             draw_Ui_Combat()
         elseif choix_UI == 4 then
             loot_Calculation()
+
+            
+
             draw_Ui_victory()
         elseif choix_UI == 5 then
             draw_Ui_Defeat()

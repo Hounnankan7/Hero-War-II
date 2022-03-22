@@ -114,6 +114,7 @@
                     level_UP()
                     loot_Ajout()
                     --
+                    battle_number = battle_number + 1
 
                     calcul_trophee_slayer()
                     monster_choice = randomNumber(a, b)
