@@ -18,6 +18,33 @@ damage_to_player = 0
     
 function EnnemyCreation() --Fonction d'initialisation de l'ennemie
     
+    if joueur.level >= 1 and joueur.level <= 15 then
+        a = 1
+        b = 15
+        monster_choice = randomNumber(a, b)
+
+    elseif joueur.level > 15 and joueur.level <= 35 then
+        a = 1
+        b = 24
+        monster_choice = randomNumber(a, b)
+
+    elseif joueur.level > 35 and joueur.level <= 50 then
+        a = 1
+        b = 27
+        monster_choice = randomNumber(a, b)
+
+    elseif joueur.level > 50 and joueur.level <= 60 then
+        a = 1
+        b = 28
+        monster_choice = randomNumber(a, b)
+
+    elseif joueur.level > 60 and joueur.level <= 100 then
+        a = 16
+        b = 30
+        monster_choice = randomNumber(a, b)
+
+    end
+
     CreateMonster(monster_choice)
 
     ennemie = monster
@@ -32,6 +59,7 @@ function EnnemyCreation() --Fonction d'initialisation de l'ennemie
     ennemie.defense_point = monster.defense_point
     ennemie.max_defense_point = monster.max_defense_point
     ennemie.exp_loot = monster.exp_loot
+
 end
 
 function EnnemyDraw() --Fonction pour dessiner l'ennemie
