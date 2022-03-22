@@ -15,6 +15,11 @@ Version 1.0 of the text based fighting game between heroes from legend, and deve
 
 ![Screenshot](assets/readme_image/battle.PNG)
 
+
++ Un système de loot en cas de victoire :
+
+![Screenshot](assets/readme_image/loot_system.PNG)
+
 + Une liste fixe de badge prise en compte pour la section de fenetre en cours :
 
 ![Screenshot](assets/readme_image/trophy.PNG)
