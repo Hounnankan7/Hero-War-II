@@ -17,5 +17,5 @@ function love.conf(fenetre)
     fenetre.modules.keyboard = true           -- Enable the keyboard module (boolean)
     fenetre.modules.mouse = true              -- Enable the mouse module (boolean)
 
-    fenetre.console = true
+    --fenetre.console = true
 end
