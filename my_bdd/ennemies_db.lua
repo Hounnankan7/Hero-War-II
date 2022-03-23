@@ -69,7 +69,7 @@
             monster.max_defense_point = 22
             monster.exp_loot = 60
 
-        elseif random_monster >= 11 and random_monster <= 15 then
+        elseif random_monster >= 11 and random_monster <= 13 then
 
             monster.id = 3
             monster.name = "Musketeer"
@@ -83,6 +83,21 @@
             monster.defense_point = 25
             monster.max_defense_point = 25
             monster.exp_loot = 100
+
+        elseif random_monster >= 14 and random_monster <= 15 then
+
+            monster.id = 3
+            monster.name = "Horse Unit"
+            monster.image = love.graphics.newImage("my_bdd/monsters/Cavalier.png")
+            monster.health_point = 170
+            monster.max_health_point = 170
+            monster.magic_point = 60
+            monster.max_magic_point = 60
+            monster.attack_point = 26
+            monster.max_attack_point = 26
+            monster.defense_point = 30
+            monster.max_defense_point = 30
+            monster.exp_loot = 130
 
         elseif random_monster >= 16 and random_monster <= 18 then
 
