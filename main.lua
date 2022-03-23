@@ -32,6 +32,7 @@ var_choix =0
         audio_Init()
         ---------------------------------------------------------------------
 
+
         -- var pour le tour par tour du combat
         i = 1
         j = 2

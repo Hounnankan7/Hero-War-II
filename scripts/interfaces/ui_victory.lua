@@ -51,6 +51,7 @@
     function victory(dt)
         if joueur.health_point <= 0 then
 
+            ui_text.action = ""
             joueur.health_point = 0
             my_turn = randomNumber(i, j)
             choix_UI = 5
@@ -94,6 +95,7 @@
 
         elseif ennemie.health_point <= 0 then
 
+            ui_text.action = ""
             ennemie.health_point = 0
             my_turn = randomNumber(i, j)
             choix_UI = 4

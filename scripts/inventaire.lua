@@ -34,29 +34,31 @@ end
     
 --end
 
-function usePotionHP(dt) --Utilisation de la potion HP + 40
+function usePotionHP(dt) --Utilisation de la potion HP + 20
     if nbr_item.hp >= 1  then
 
 
         if joueur.health_point < joueur.max_health_point then
-            if joueur.health_point + 40 < joueur.max_health_point then
-                print("Player "..my_turn.." HP +40")
+            if joueur.health_point + 20 < joueur.max_health_point then
+                print("Player "..my_turn.." HP +20")
     
-                joueur.health_point = math.floor((joueur.health_point + 40 ) )
+                joueur.health_point = math.floor((joueur.health_point + 20 ) )
                 nbr_item.hp = nbr_item.hp - 1
-                my_turn = 2
                 trophee.potion = trophee.potion + 1
+                ui_text.action = "Player "..my_turn.." HP +20"
                 delay_s(0.9)
+                my_turn = 2
         
                 print("Player "..my_turn.." turn")
-            elseif joueur.health_point + 40 >= joueur.max_health_point then
-                print("Player "..my_turn.." HP +40")
+            elseif joueur.health_point + 20 >= joueur.max_health_point then
+                print("Player "..my_turn.." HP +20")
     
                 joueur.health_point = joueur.max_health_point
                 nbr_item.hp = nbr_item.hp - 1
-                my_turn = 2
                 trophee.potion = trophee.potion + 1
+                ui_text.action = "Player "..my_turn.." HP +20"
                 delay_s(0.9)
+                my_turn = 2
         
                 print("Player "..my_turn.." turn")
     
@@ -64,11 +66,13 @@ function usePotionHP(dt) --Utilisation de la potion HP + 40
         elseif joueur.health_point >= joueur.max_health_point then
             print("Votre vie est deja pleine")
             joueur.health_point = joueur.max_health_point
+            ui_text.action = "Votre vie est deja pleine"
             delay_s(0.9)
         end
 
     elseif nbr_item.hp <= 0 then
         nbr_item.hp = 0
+        ui_text.action = "Player "..my_turn.." n'a plus la potion correspondante"
         delay_s(0.9)
         print("Player "..my_turn.." n'a plus la potion correspondante")
     end
@@ -85,9 +89,10 @@ function usePotionATK(dt) --Utilisation de la potion HP + 150
     
                 joueur.health_point = math.floor((joueur.health_point + 150 ) )
                 nbr_item.hp_2 = nbr_item.hp_2 - 1
-                my_turn = 2
                 trophee.potion = trophee.potion + 1
+                ui_text.action = "Player "..my_turn.." HP +150"
                 delay_s(0.9)
+                my_turn = 2
         
                 print("Player "..my_turn.." turn")
             elseif joueur.health_point + 150 >= joueur.max_health_point then
@@ -95,9 +100,10 @@ function usePotionATK(dt) --Utilisation de la potion HP + 150
     
                 joueur.health_point = joueur.max_health_point
                 nbr_item.hp_2 = nbr_item.hp_2 - 1
-                my_turn = 2
                 trophee.potion = trophee.potion + 1
+                ui_text.action = "Player "..my_turn.." HP +150"
                 delay_s(0.9)
+                my_turn = 2
         
                 print("Player "..my_turn.." turn")
     
@@ -105,11 +111,13 @@ function usePotionATK(dt) --Utilisation de la potion HP + 150
         elseif joueur.health_point >= joueur.max_health_point then
             print("Votre vie est deja pleine")
             joueur.health_point = joueur.max_health_point
+            ui_text.action = "Votre vie est deja pleine"
             delay_s(0.9)
         end
 
     elseif nbr_item.hp_2 <= 0 then
         nbr_item.hp_2 = 0
+        ui_text.action = "Player "..my_turn.." n'a plus la potion correspondante"
         delay_s(0.9)
         print("Player "..my_turn.." n'a plus la potion correspondante")
     end
@@ -125,9 +133,10 @@ function usePotionDEF(dt) --Utilisation de la potion MP + 20
     
                 joueur.magic_point = math.floor((joueur.magic_point + 20 ) )
                 nbr_item.mp_2 = nbr_item.mp_2 - 1
-                my_turn = 2
                 trophee.potion = trophee.potion + 1
+                ui_text.action = "Player "..my_turn.." TP +20"
                 delay_s(0.9)
+                my_turn = 2
         
                 print("Player "..my_turn.." turn")
                 
@@ -136,9 +145,10 @@ function usePotionDEF(dt) --Utilisation de la potion MP + 20
     
                 joueur.magic_point = joueur.max_magic_point
                 nbr_item.mp_2 = nbr_item.mp_2 - 1
-                my_turn = 2
                 trophee.potion = trophee.potion + 1
+                ui_text.action = "Player "..my_turn.." TP +20"
                 delay_s(0.9)
+                my_turn = 2
         
                 print("Player "..my_turn.." turn")            
     
@@ -146,11 +156,13 @@ function usePotionDEF(dt) --Utilisation de la potion MP + 20
         elseif joueur.magic_point >= joueur.max_magic_point then
             print("Vos point de technique sont deja pleins")
             joueur.magic_point = joueur.max_magic_point
+            ui_text.action = "Vos point de technique sont deja pleins"
             delay_s(0.9)
         end
 
     elseif nbr_item.mp_2 <= 0 then
         nbr_item.mp_2 = 0
+        ui_text.action = "Player "..my_turn.." n'a plus la potion correspondante"
         delay_s(0.9)
         print("Player "..my_turn.." n'a plus la potion correspondante")
     end
@@ -165,9 +177,10 @@ function usePotionMP(dt) --Utilisation de la potion MP + 150
     
                 joueur.magic_point = math.floor((joueur.magic_point + 150 ) )
                 nbr_item.mp = nbr_item.mp - 1
-                my_turn = 2
                 trophee.potion = trophee.potion + 1
+                ui_text.action = "Player "..my_turn.." TP +150"
                 delay_s(0.9)
+                my_turn = 2
         
                 print("Player "..my_turn.." turn")
                 
@@ -176,9 +189,10 @@ function usePotionMP(dt) --Utilisation de la potion MP + 150
     
                 joueur.magic_point = joueur.max_magic_point
                 nbr_item.mp = nbr_item.mp - 1
-                my_turn = 2
                 trophee.potion = trophee.potion + 1
+                ui_text.action = "Player "..my_turn.." TP +150"
                 delay_s(0.9)
+                my_turn = 2
         
                 print("Player "..my_turn.." turn")            
     
@@ -186,11 +200,13 @@ function usePotionMP(dt) --Utilisation de la potion MP + 150
         elseif joueur.magic_point >= joueur.max_magic_point then
             print("Vos point de technique sont deja pleins")
             joueur.magic_point = joueur.max_magic_point
+            ui_text.action = "Vos point de technique sont deja pleins"
             delay_s(0.9)
         end
 
     elseif nbr_item.mp <= 0 then
         nbr_item.mp = 0
+        ui_text.action = "Player "..my_turn.." n'a plus la potion correspondante"
         delay_s(0.9)
         print("Player "..my_turn.." n'a plus la potion correspondante")
     end

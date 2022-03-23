@@ -63,6 +63,11 @@
         love.graphics.print("x"..nbr_item.mp_2, 22*tileSize, 45*tileSize)
         love.graphics.print("x"..nbr_item.mp, 26*tileSize, 45*tileSize)
 
+        --ui_text
+        ui_text = {}
+        ui_text.turn =""
+        ui_text.action =""
+
     end
 
     function ui_Combat_Update()
@@ -99,7 +104,8 @@
         love.graphics.print("x"..nbr_item.hp_2, 18*tileSize, 43*tileSize)
         love.graphics.print("x"..nbr_item.mp_2, 22*tileSize, 43*tileSize)
         love.graphics.print("x"..nbr_item.mp, 26*tileSize, 43*tileSize)
-        
+
+        --ui_text
 
     end
     
@@ -178,6 +184,12 @@
         love.graphics.print("x"..nbr_item.mp_2, 22*tileSize, 43*tileSize)
         love.graphics.print("x"..nbr_item.mp, 26*tileSize, 43*tileSize)
         
+        --ui_text
+        love.graphics.setFont(font_quard)
+        love.graphics.print("Previous ations : ", 29.2*tileSize, 4*tileSize)
+        --love.graphics.print(ui_text.turn, 27*tileSize, 4*tileSize)
+        love.graphics.print(ui_text.action , 24.5*tileSize, 6*tileSize)
+
 
     end
 

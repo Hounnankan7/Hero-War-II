@@ -3,7 +3,7 @@
 function love.conf(fenetre)
     --Config graphic de la fenetre
     fenetre.window.title = "HERO WAR II"
-    --fenetre.window.icon = ""
+    fenetre.window.icon = "assets/icons/trophy/Shield.png"
     fenetre.window.width = 1024
     fenetre.window.height = 768
 

@@ -93,8 +93,9 @@ function EnnemySimpleAttack(dt)
         print("Player "..my_turn.." deal "..damage_to_player.." damage")
 
         joueur.health_point = math.floor((joueur.health_point - damage_to_player ) )
-        my_turn = 1
-        delay_s(0.9)
+        ui_text.action = "Ennemy deal "..damage_to_player.." damage to Player"
+        
+        delay_s(0.5) my_turn = 1
     
         print("Player "..my_turn.." turn")
 
@@ -112,8 +113,9 @@ function EnnemyCriticalAttack(dt)
         print("Player "..my_turn.." deal critical damage of "..damage_to_player)
 
         joueur.health_point = math.floor((joueur.health_point - damage_to_player ) )
-        my_turn = 1
-        delay_s(0.9)
+        ui_text.action = "Ennemy deal "..damage_to_player.." critical damage to Player"
+        
+        delay_s(0.5) my_turn = 1
     
         print("Player "..my_turn.." turn")
 
@@ -133,8 +135,9 @@ function EnnemySpecialAttack(dt)
 
         joueur.health_point = math.floor((joueur.health_point - damage_to_player ) )
         ennemie.magic_point = math.floor((ennemie.magic_point - 10 ) )
-        my_turn = 1
-        delay_s(0.9)
+        ui_text.action = "Ennemy deal "..damage_to_player.." damage to Player"
+        
+        delay_s(0.5) my_turn = 1
 
         print("Player "..my_turn.." turn")
 
@@ -149,8 +152,9 @@ function EnnemyDefend(dt)
     print("Player "..my_turn.." defense +10")
 
     ennemie.defense_point = math.floor((ennemie.defense_point + 10 ) )
-    my_turn = 1
-    delay_s(0.9)
+    ui_text.action = "Ennemy defence + 10"
+    
+    delay_s(0.5) my_turn = 1
 
     print("Player "..my_turn.." turn")
     

@@ -62,8 +62,10 @@ function PlayerSimpleAttack(dt) --Function Attack normale
             print("Player "..my_turn.." deal "..normal_damage_to_ennemy.." damage")
     
             ennemie.health_point = math.floor((ennemie.health_point - normal_damage_to_ennemy ) )
+            ui_text.action = "Player deal "..normal_damage_to_ennemy.." damage to Ennemy"
+            delay_s(0.8)  
             my_turn = 2
-            delay_s(0.9)
+            
     
             print("Player "..my_turn.." turn")
     
@@ -84,8 +86,10 @@ function PlayerSimpleAttack(dt) --Function Attack normale
             print("Player "..my_turn.." deal critical damage of "..normal_damage_to_ennemy)
     
             ennemie.health_point = math.floor((ennemie.health_point - normal_damage_to_ennemy ) )
+            ui_text.action = "Player deal critical damage of "..normal_damage_to_ennemy
+            delay_s(0.8)  
             my_turn = 2
-            delay_s(0.9)
+            
     
             print("Player "..my_turn.." turn")
     
@@ -114,14 +118,18 @@ function PlayerSkill_1_Attack(dt)
         
                 ennemie.health_point = math.floor((ennemie.health_point - skill_damage_to_ennemy ) )
                 player.magic_point = math.floor((player.magic_point - 10 ) )
+
+                ui_text.action = "Player use Skill 1 to deal "..skill_damage_to_ennemy.." damage to Ennemy"
+                delay_s(0.8)  
                 my_turn = 2
-                delay_s(0.9)
+                
     
                 print("Player "..my_turn.." turn")
     
             elseif player.magic_point < 10 then
                 print("Vous n'avez pas assez de TP pour cette attaque")
-                delay_s(0.9)
+                ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                
             end
     
         elseif ennemie.health_point <= 0 then
@@ -144,14 +152,18 @@ function PlayerSkill_1_Attack(dt)
         
                 ennemie.health_point = math.floor((ennemie.health_point - skill_damage_to_ennemy ) )
                 player.magic_point = math.floor((player.magic_point - 10 ) )
+
+                ui_text.action = "Player use Skill 1 to deal "..skill_damage_to_ennemy.." critical damage to Ennemy"
+                delay_s(0.8)  
                 my_turn = 2
-                delay_s(0.9)
+                
     
                 print("Player "..my_turn.." turn")
     
             elseif player.magic_point < 10 then
                 print("Vous n'avez pas assez de TP pour cette attaque")
-                delay_s(0.9)
+                ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                
             end
     
         elseif ennemie.health_point <= 0 then
@@ -179,14 +191,18 @@ function PlayerSkill_2_Attack(dt)
         
                 ennemie.health_point = math.floor((ennemie.health_point - skill_damage_to_ennemy ) )
                 player.magic_point = math.floor((player.magic_point - 15 ) )
+
+                ui_text.action = "Player use Skill 2 to deal "..skill_damage_to_ennemy.." damage to Ennemy"
+                delay_s(0.8)  
                 my_turn = 2
-                delay_s(0.9)
+                
     
                 print("Player "..my_turn.." turn")
     
             elseif player.magic_point < 15 then
                 print("Vous n'avez pas assez de TP pour cette attaque")
-                delay_s(0.9)
+                ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                
             end
     
         elseif ennemie.health_point <= 0 then
@@ -209,14 +225,17 @@ function PlayerSkill_2_Attack(dt)
         
                 ennemie.health_point = math.floor((ennemie.health_point - skill_damage_to_ennemy ) )
                 player.magic_point = math.floor((player.magic_point - 15 ) )
+
+                ui_text.action = "Player use Skill 2 to deal "..skill_damage_to_ennemy.." critical damage to Ennemy"
+                delay_s(0.8) 
                 my_turn = 2
-                delay_s(0.9)
+                
     
                 print("Player "..my_turn.." turn")
     
             elseif player.magic_point < 15 then
                 print("Vous n'avez pas assez de TP pour cette attaque")
-                delay_s(0.9)
+                ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
             end
     
         elseif ennemie.health_point <= 0 then
@@ -233,8 +252,11 @@ function PlayerDefend(dt)
     print("Player "..my_turn.." defense +10")
 
     joueur.defense_point = math.floor((joueur.defense_point + 10))
+
+    ui_text.action = "Player defence + 10"
+    delay_s(0.8)  
     my_turn = 2
-    delay_s(0.9)
+    
 
     print("Player "..my_turn.." turn")
 
