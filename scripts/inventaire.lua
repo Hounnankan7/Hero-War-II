@@ -140,7 +140,7 @@ function usePotionDEF(dt) --Utilisation de la potion MP + 20
         
                 print("Player "..my_turn.." turn")
                 
-            elseif joueur.magic_point + 10 >= joueur.max_magic_point then
+            elseif joueur.magic_point + 20 >= joueur.max_magic_point then
                 print("Player "..my_turn.." TP +20")
     
                 joueur.magic_point = joueur.max_magic_point
