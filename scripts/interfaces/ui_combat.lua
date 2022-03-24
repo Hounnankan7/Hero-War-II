@@ -176,7 +176,7 @@
         love.graphics.setFont(font_quard)
         love.graphics.print("HP+10", 14*tileSize, 38.8*tileSize)
         love.graphics.print("HP+150", 18*tileSize, 38.8*tileSize)
-        love.graphics.print("TP+10", 22*tileSize, 38.8*tileSize)
+        love.graphics.print("TP+20", 22*tileSize, 38.8*tileSize)
         love.graphics.print("TP+150", 26*tileSize, 38.8*tileSize)
         love.graphics.setFont(font_third)
         love.graphics.print("x"..nbr_item.hp, 14*tileSize, 43*tileSize)
