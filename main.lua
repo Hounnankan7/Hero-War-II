@@ -74,7 +74,6 @@ var_choix =0
         
         exitGame(choix_UI)
 
-
         choix_UI = manipulationInterface(choix_UI, dt) -- réaction en fonction des boutons cliqués
 
         trophee_Update()
